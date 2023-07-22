@@ -117,6 +117,10 @@ a {
   border-radius: 4px;
 }
 
+#tribute-info {
+  grid-area: corpo;
+}
+
 /* footer */
 #footer {
   color: white;
