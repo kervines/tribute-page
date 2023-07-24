@@ -164,6 +164,38 @@ a {
   order: 8;
 }
 
+/* Linha Cronológica */
+.crono {
+  grid-area: carrossel;
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+.crono ul {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+}
+
+.crono-card {
+  border: 1px solid #2e2e2e;
+  min-width: 250px;
+}
+
+.crono-card span {
+  text-align: center;
+  background-color: #2e2e2e;
+  display: block;
+  color: #fff;
+  padding: 10px;
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+
+.crono-card p {
+  padding: 5px;
+}
+
 /* footer */
 #footer {
   color: white;
