@@ -89,6 +89,7 @@ a {
 #img-div {
   grid-area: img;
   padding: 10px;
+  margin-bottom: 40px;
 }
 
 .main-image {
@@ -119,6 +120,48 @@ a {
 
 #tribute-info {
   grid-area: corpo;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#tribute-info h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  grid-column: 1/-1;
+}
+
+#tribute-info p {
+  text-indent: 40px;
+  text-align: justify;
+  padding: 10px;
+}
+
+#tribute-info p:nth-child(2) {
+  order: 3;
+}
+
+#tribute-info p:nth-child(3) {
+  order: 5;
+}
+
+#tribute-info p:nth-child(4) {
+  order: 7;
+}
+
+#tribute-info p:nth-child(5) {
+  order: 4;
+}
+
+#tribute-info p:nth-child(6) {
+  order: 6;
+}
+
+#tribute-info p:nth-child(7) {
+  order: 8;
 }
 
 /* footer */
