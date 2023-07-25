@@ -126,7 +126,6 @@ h2 {
 #tribute-info {
   grid-area: corpo;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   margin-bottom: 40px;
 }
@@ -145,38 +144,12 @@ h2 {
   line-height: 1.5;
 }
 
-#tribute-info p:nth-child(2) {
-  order: 3;
-}
-
-#tribute-info p:nth-child(3) {
-  order: 5;
-}
-
-#tribute-info p:nth-child(4) {
-  order: 7;
-}
-
-#tribute-info p:nth-child(5) {
-  order: 4;
-}
-
-#tribute-info p:nth-child(6) {
-  order: 6;
-}
-
-#tribute-info p:nth-child(7) {
-  order: 8;
-}
-
 /* Linha Cronológica */
 .crono {
   grid-area: carrossel;
   margin: 0 auto;
   margin-bottom: 40px;
   width: 960px;
-  height: 250px;
-  overflow-x: auto;
 }
 
 .crono h2 {
@@ -184,31 +157,18 @@ h2 {
   position: relative;
 }
 
-.crono h2::after {
-  content: '→';
-  position: absolute;
-  animation: arrow-move 0.5s ease-in infinite alternate;
-}
-
-@keyframes arrow-move {
-  from {
-    right: 0;
-  }
-  to {
-    right: 10px;
-  }
-}
-
 .crono ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0px 5px;
-  gap: 5px;
+  gap: 10px 100px;
   list-style: none;
 }
 
 .crono-card {
   border-radius: 5px;
-  min-width: 230px;
+  width: 350px;
+  height: 150px;
   box-shadow: 0px 2px 2px 0px;
 }
 
