@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 28px;
+}
+
 /* Header */
 
 .header nav ul {
@@ -65,7 +69,7 @@ a {
 /* Main/Conteudo */
 
 .main {
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 
@@ -75,6 +79,7 @@ a {
     'corpo corpo'
     'carrossel carrossel'
     'doutrina doutrina'
+    'ref ref'
     'footer footer';
 }
 
@@ -100,7 +105,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -100px;
-  width: 100%;
+  width: 500px;
   height: 250px;
 
   border-radius: 4px;
@@ -122,22 +127,22 @@ a {
   grid-area: corpo;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 960px;
   margin: 0 auto;
   margin-bottom: 40px;
 }
 
 #tribute-info h2 {
   text-align: center;
-  font-size: 28px;
   margin-bottom: 20px;
   grid-column: 1/-1;
 }
 
 #tribute-info p {
   text-indent: 40px;
+  font-size: 18px;
   text-align: justify;
   padding: 10px;
+  line-height: 1.5;
 }
 
 #tribute-info p:nth-child(2) {
@@ -167,19 +172,44 @@ a {
 /* Linha Cronológica */
 .crono {
   grid-area: carrossel;
+  margin: 0 auto;
   margin-bottom: 40px;
+  width: 960px;
+  height: 250px;
   overflow-x: auto;
+}
+
+.crono h2 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.crono h2::after {
+  content: '→';
+  position: absolute;
+  animation: arrow-move 0.5s ease-in infinite alternate;
+}
+
+@keyframes arrow-move {
+  from {
+    right: 0;
+  }
+  to {
+    right: 10px;
+  }
 }
 
 .crono ul {
   display: flex;
+  padding: 0px 5px;
   gap: 5px;
   list-style: none;
 }
 
 .crono-card {
-  border: 1px solid #2e2e2e;
-  min-width: 250px;
+  border-radius: 5px;
+  min-width: 230px;
+  box-shadow: 0px 2px 2px 0px;
 }
 
 .crono-card span {
@@ -188,6 +218,8 @@ a {
   display: block;
   color: #fff;
   padding: 10px;
+  border-radius: 5px 5px 0px 0px;
+
   letter-spacing: 5px;
   font-weight: 600;
 }
@@ -196,8 +228,42 @@ a {
   padding: 5px;
 }
 
+/* Doutrina */
+#doutrina {
+  grid-area: doutrina;
+  margin-bottom: 40px;
+}
+
+#doutrina h2 {
+  margin-bottom: 20px;
+}
+
+#doutrina p {
+  text-indent: 40px;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Referencia */
+#referencia {
+  grid-area: ref;
+}
+
+#referencia h2 {
+  margin-bottom: 20px;
+}
+
+#referencia p {
+  text-indent: 40px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 /* footer */
 #footer {
+  grid-area: footer;
+  height: 40vh;
   color: white;
   background-color: #2e2e2e;
   padding: 40px;
@@ -206,4 +272,19 @@ blockquote {
   font-size: 18px;
   font-style: italic;
   text-align: center;
+}
+
+blockquote:before,
+blockquote::after {
+  font-family: none;
+  font-size: 50px;
+  position: relative;
+}
+
+blockquote::before {
+  content: '“';
+}
+blockquote::after {
+  top: 40px;
+  content: '”';
 }
