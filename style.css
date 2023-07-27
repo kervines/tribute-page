@@ -126,7 +126,8 @@ h2 {
 #tribute-info {
   grid-area: corpo;
   display: grid;
-  margin: 0 auto;
+  padding: 20px 0;
+  margin: auto;
   margin-bottom: 40px;
 }
 
@@ -175,6 +176,7 @@ h2 {
   position: absolute;
   top: 75px;
   left: 50%;
+  transform: translate(-50%);
 }
 
 .crono-card {
@@ -206,6 +208,29 @@ h2 {
   transition: all 0.5s;
 }
 
+.crono-card:nth-child(1)::before,
+.crono-card:nth-child(4)::before,
+.crono-card:nth-child(7)::before,
+.crono-card:nth-child(10)::before,
+.crono-card:nth-child(13)::before,
+.crono-card:nth-child(16)::before,
+.crono-card:nth-child(19)::before,
+.crono-card:nth-child(22)::before,
+.crono-card:nth-child(25)::before,
+.crono-card:nth-child(28)::before,
+.crono-card:nth-child(31)::before,
+.crono-card:nth-child(34)::before,
+.crono-card:nth-child(37)::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #2e2e2e;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .crono-card:nth-child(1):hover::after,
 .crono-card:nth-child(4):hover::after,
 .crono-card:nth-child(7):hover::after,
@@ -220,7 +245,7 @@ h2 {
 .crono-card:nth-child(34):hover::after,
 .crono-card:nth-child(37):hover::after {
   content: '';
-  height: 2px;
+  height: 3px;
   animation: move 0.6s ease forwards;
   background-color: #2e2e2e;
   position: absolute;
@@ -246,43 +271,56 @@ h2 {
 .crono-card:nth-child(34):hover::after {
   left: 50%;
 }
-.crono-card:nth-child(1):hover::after {
+.crono-card:nth-child(1):hover::after,
+.crono-card:nth-child(1)::before {
   top: 75px;
 }
-.crono-card:nth-child(4):hover::after {
+.crono-card:nth-child(4):hover::after,
+.crono-card:nth-child(4)::before {
   top: calc(75px + 150px);
 }
-.crono-card:nth-child(7):hover::after {
+.crono-card:nth-child(7):hover::after,
+.crono-card:nth-child(7)::before {
   top: calc(75px + 300px);
 }
-.crono-card:nth-child(10):hover::after {
+.crono-card:nth-child(10):hover::after,
+.crono-card:nth-child(10)::before {
   top: calc(75px + 450px);
 }
-.crono-card:nth-child(13):hover::after {
+.crono-card:nth-child(13):hover::after,
+.crono-card:nth-child(13)::before {
   top: calc(75px + 600px);
 }
-.crono-card:nth-child(16):hover::after {
+.crono-card:nth-child(16):hover::after,
+.crono-card:nth-child(16)::before {
   top: calc(75px + 750px);
 }
-.crono-card:nth-child(19):hover::after {
+.crono-card:nth-child(19):hover::after,
+.crono-card:nth-child(19)::before {
   top: calc(75px + 900px);
 }
-.crono-card:nth-child(22):hover::after {
+.crono-card:nth-child(22):hover::after,
+.crono-card:nth-child(22)::before {
   top: calc(75px + 1050px);
 }
-.crono-card:nth-child(25):hover::after {
+.crono-card:nth-child(25):hover::after,
+.crono-card:nth-child(25)::before {
   top: calc(75px + 1200px);
 }
-.crono-card:nth-child(28):hover::after {
+.crono-card:nth-child(28):hover::after,
+.crono-card:nth-child(28)::before {
   top: calc(75px + 1350px);
 }
-.crono-card:nth-child(31):hover::after {
+.crono-card:nth-child(31):hover::after,
+.crono-card:nth-child(31)::before {
   top: calc(75px + 1500px);
 }
-.crono-card:nth-child(34):hover::after {
+.crono-card:nth-child(34):hover::after,
+.crono-card:nth-child(34)::before {
   top: calc(75px + 1650px);
 }
-.crono-card:nth-child(37):hover::after {
+.crono-card:nth-child(37):hover::after,
+.crono-card:nth-child(37)::before {
   top: calc(75px + 1800px);
 }
 
@@ -298,7 +336,8 @@ h2 {
 /* Doutrina */
 #doutrina {
   grid-area: doutrina;
-  margin-bottom: 40px;
+  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 #doutrina h2 {
@@ -334,7 +373,11 @@ h2 {
   height: 40vh;
   color: white;
   background-color: #2e2e2e;
-  padding: 0 40px;
+  padding: 20px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 blockquote {
