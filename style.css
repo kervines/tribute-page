@@ -118,7 +118,7 @@ h2 {
   bottom: 10px;
   left: 10px;
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 18px;
   color: #fff;
   border-radius: 4px;
 }
@@ -315,6 +315,7 @@ h2 {
 /* Referencia */
 #referencia {
   grid-area: ref;
+  margin-bottom: 40px;
 }
 
 #referencia h2 {
@@ -333,8 +334,9 @@ h2 {
   height: 40vh;
   color: white;
   background-color: #2e2e2e;
-  padding: 40px;
+  padding: 0 40px;
 }
+
 blockquote {
   font-size: 24px;
   font-style: italic;
@@ -355,7 +357,7 @@ blockquote::before {
   content: '“';
 }
 blockquote::after {
-  top: 40px;
+  top: 10px;
   content: '”';
 }
 
