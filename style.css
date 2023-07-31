@@ -101,7 +101,7 @@ h2 {
   position: relative;
 }
 .main-image .image {
-  background-image: url('./img/Therese_von_Lisieux.jpg');
+  background-image: url('./img/9.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -100px;
@@ -231,6 +231,47 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+.crono-card:nth-child(1)::after,
+.crono-card:nth-child(7)::after,
+.crono-card:nth-child(13)::after,
+.crono-card:nth-child(19)::after,
+.crono-card:nth-child(25)::after,
+.crono-card:nth-child(31)::after,
+.crono-card:nth-child(37)::after {
+  right: 50%;
+}
+
+.crono-card:nth-child(4)::after,
+.crono-card:nth-child(10)::after,
+.crono-card:nth-child(16)::after,
+.crono-card:nth-child(22)::after,
+.crono-card:nth-child(28)::after,
+.crono-card:nth-child(34)::after {
+  left: 50%;
+}
+
+.crono-card:nth-child(1)::after,
+.crono-card:nth-child(4)::after,
+.crono-card:nth-child(7)::after,
+.crono-card:nth-child(10)::after,
+.crono-card:nth-child(13)::after,
+.crono-card:nth-child(16)::after,
+.crono-card:nth-child(19)::after,
+.crono-card:nth-child(22)::after,
+.crono-card:nth-child(25)::after,
+.crono-card:nth-child(28)::after,
+.crono-card:nth-child(31)::after,
+.crono-card:nth-child(34)::after,
+.crono-card:nth-child(37)::after {
+  content: '';
+  height: 3px;
+  animation: move-reverse 0.6s ease forwards;
+  background-color: #2e2e2e;
+  position: absolute;
+  border-radius: 5px;
+  z-index: -1;
+}
+
 .crono-card:nth-child(1):hover::after,
 .crono-card:nth-child(4):hover::after,
 .crono-card:nth-child(7):hover::after,
@@ -272,54 +313,67 @@ h2 {
   left: 50%;
 }
 .crono-card:nth-child(1):hover::after,
+.crono-card:nth-child(1)::after,
 .crono-card:nth-child(1)::before {
   top: 75px;
 }
 .crono-card:nth-child(4):hover::after,
+.crono-card:nth-child(4)::after,
 .crono-card:nth-child(4)::before {
   top: calc(75px + 150px);
 }
 .crono-card:nth-child(7):hover::after,
+.crono-card:nth-child(7)::after,
 .crono-card:nth-child(7)::before {
   top: calc(75px + 300px);
 }
 .crono-card:nth-child(10):hover::after,
+.crono-card:nth-child(10)::after,
 .crono-card:nth-child(10)::before {
   top: calc(75px + 450px);
 }
 .crono-card:nth-child(13):hover::after,
+.crono-card:nth-child(13)::after,
 .crono-card:nth-child(13)::before {
   top: calc(75px + 600px);
 }
 .crono-card:nth-child(16):hover::after,
+.crono-card:nth-child(16)::after,
 .crono-card:nth-child(16)::before {
   top: calc(75px + 750px);
 }
 .crono-card:nth-child(19):hover::after,
+.crono-card:nth-child(19)::after,
 .crono-card:nth-child(19)::before {
   top: calc(75px + 900px);
 }
 .crono-card:nth-child(22):hover::after,
+.crono-card:nth-child(22)::after,
 .crono-card:nth-child(22)::before {
   top: calc(75px + 1050px);
 }
 .crono-card:nth-child(25):hover::after,
+.crono-card:nth-child(25)::after,
 .crono-card:nth-child(25)::before {
   top: calc(75px + 1200px);
 }
 .crono-card:nth-child(28):hover::after,
+.crono-card:nth-child(28)::after,
 .crono-card:nth-child(28)::before {
   top: calc(75px + 1350px);
 }
 .crono-card:nth-child(31):hover::after,
+.crono-card:nth-child(31)::after,
 .crono-card:nth-child(31)::before {
   top: calc(75px + 1500px);
 }
 .crono-card:nth-child(34):hover::after,
+.crono-card:nth-child(34)::after,
 .crono-card:nth-child(34)::before {
   top: calc(75px + 1650px);
 }
 .crono-card:nth-child(37):hover::after,
+.crono-card:nth-child(37)::after,
 .crono-card:nth-child(37)::before {
   top: calc(75px + 1800px);
 }
@@ -330,6 +384,15 @@ h2 {
   }
   100% {
     width: 65px;
+  }
+}
+
+@keyframes move-reverse {
+  0% {
+    width: 65px;
+  }
+  100% {
+    width: 0;
   }
 }
 
@@ -349,6 +412,12 @@ h2 {
   text-align: justify;
   font-size: 18px;
   line-height: 1.5;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Referencia */
