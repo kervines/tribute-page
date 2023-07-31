@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,200&display=swap');
 
+:root {
+  --color-1: #f5f7cf;
+  --color-2: #ddcf94;
+  --color-3: #ba872b;
+  --color-4: #a13d24;
+  --color-5: #213131;
+  --color-6: #614024;
+  --color-7: #1b1208;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +33,7 @@ a {
 
 h2 {
   font-size: 28px;
+  margin-bottom: 20px;
 }
 
 /* Header */
@@ -79,6 +90,7 @@ h2 {
     'corpo corpo'
     'carrossel carrossel'
     'doutrina doutrina'
+    'gallery gallery'
     'ref ref'
     'footer footer';
 }
@@ -133,7 +145,6 @@ h2 {
 
 #tribute-info h2 {
   text-align: center;
-  margin-bottom: 20px;
   grid-column: 1/-1;
 }
 
@@ -155,7 +166,6 @@ h2 {
 
 .crono h2 {
   text-align: center;
-  margin-bottom: 20px;
   position: relative;
 }
 
@@ -403,10 +413,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-#doutrina h2 {
-  margin-bottom: 20px;
-}
-
 #doutrina p {
   text-indent: 40px;
   text-align: justify;
@@ -416,18 +422,68 @@ h2 {
 
 /* Gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-area: gallery;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-1,
+.img-2,
+.img-3,
+.img-4,
+.img-5,
+.img-6,
+.img-7,
+.img-8,
+.img-9 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+
+.img-1 {
+  background-image: url(./img/1.jpg);
+}
+
+.img-2 {
+  background-image: url(./img/2.jpeg);
+}
+.img-3 {
+  background-image: url(./img/3.jpg);
+  background-position-x: center;
+}
+.img-4 {
+  background-image: url(./img/4.jpg);
+  background-position-x: center;
+}
+.img-5 {
+  background-image: url(./img/7.jpg);
+}
+.img-6 {
+  background-image: url(./img/6.jpg);
+  background-position-x: center;
+}
+.img-7 {
+  background-image: url(./img/5.jpg);
+}
+.img-8 {
+  background-image: url(./img/8.jpeg);
+}
+.img-9 {
+  background-image: url(./img/9.jpg);
 }
 
 /* Referencia */
 #referencia {
   grid-area: ref;
   margin-bottom: 40px;
-}
-
-#referencia h2 {
-  margin-bottom: 20px;
 }
 
 #referencia p {
