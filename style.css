@@ -444,42 +444,10 @@ h2 {
 .img-7,
 .img-8,
 .img-9 {
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
   width: 320px;
   height: 320px;
-}
-
-.img-1 {
-  background-image: url(./img/1.jpg);
-}
-
-.img-2 {
-  background-image: url(./img/2.jpeg);
-}
-.img-3 {
-  background-image: url(./img/3.jpg);
-  background-position-x: center;
-}
-.img-4 {
-  background-image: url(./img/4.jpg);
-  background-position-x: center;
-}
-.img-5 {
-  background-image: url(./img/7.jpg);
-}
-.img-6 {
-  background-image: url(./img/6.jpg);
-  background-position-x: center;
-}
-.img-7 {
-  background-image: url(./img/5.jpg);
-}
-.img-8 {
-  background-image: url(./img/8.jpeg);
-}
-.img-9 {
-  background-image: url(./img/9.jpg);
 }
 
 /* Referencia */
