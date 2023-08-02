@@ -13,13 +13,19 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
 }
 
 html {
   background-color: var(--color-1);
   color: var(--color-7);
+}
+
+body {
+  background-image: url(./img/bg/hideout.svg);
+  background-size: 12px;
+  position: relative;
+  z-index: -1;
 }
 
 img {
@@ -45,12 +51,15 @@ h2 {
 
 .menu {
   padding: 50px 0;
+  width: 960px;
+  margin: auto;
 }
 
 .header .menu-list {
+  margin-left: 20px;
   display: flex;
-  justify-content: center;
-  gap: 100px;
+  justify-content: space-between;
+  /* border: 1px solid red; */
 }
 
 .header .menu-list a {
@@ -59,6 +68,7 @@ h2 {
   letter-spacing: 2px;
   padding: 16px 0;
   position: relative;
+  max-width: 960px;
 }
 
 .header .menu-list a::before {
@@ -81,13 +91,14 @@ h2 {
 /* Main/Conteudo */
 
 .main {
-  max-width: 960px;
+  width: 960px;
   margin: 0 auto;
   padding: 20px;
 
   display: grid;
   grid-template-areas:
-    'titulo img'
+    'img img'
+    'titulo titulo'
     'corpo corpo'
     'carrossel carrossel'
     'doutrina doutrina'
@@ -99,8 +110,7 @@ h2 {
 #title {
   grid-area: titulo;
   font-size: 44px;
-  text-align: end;
-  align-self: center;
+  text-align: center;
   padding: 10px;
 }
 
@@ -114,12 +124,12 @@ h2 {
   position: relative;
 }
 .main-image .image {
-  background-image: url('./img/9.jpg');
+  background-image: url('./img/3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -100px;
-  width: 500px;
-  height: 250px;
+  width: 960px;
+  height: 300px;
 
   border-radius: 4px;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
@@ -191,6 +201,7 @@ h2 {
 }
 
 .crono-card {
+  background-color: var(--color-1);
   border-radius: 5px;
   width: 350px;
   height: 150px;
@@ -210,6 +221,7 @@ h2 {
 }
 
 .crono-card p {
+  margin-top: 5px;
   padding: 5px;
   text-align: center;
 }
@@ -433,6 +445,7 @@ h2 {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .img-1,
