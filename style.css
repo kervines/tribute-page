@@ -20,6 +20,7 @@ html {
   font-family: 'Raleway', sans-serif;
   background-color: var(--color-1);
   color: var(--color-7);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -94,8 +95,6 @@ h2 {
 /* Main/Conteudo */
 
 .main {
-  /* font-family: 'Alegreya', sans-serif; */
-
   width: 960px;
   margin: 0 auto;
   display: grid;
@@ -106,8 +105,7 @@ h2 {
     'carrossel carrossel'
     'doutrina doutrina'
     'gallery gallery'
-    'ref ref'
-    'footer footer';
+    'ref ref';
 }
 
 #title {
@@ -481,11 +479,10 @@ h2 {
 
 /* footer */
 #footer {
-  grid-area: footer;
+  width: auto;
   height: 25vh;
   color: var(--color-1);
   background-color: var(--color-7);
-  padding: 20px 40px;
   display: flex;
 }
 
@@ -494,8 +491,9 @@ h2 {
   font-size: 28px;
   font-style: italic;
   text-align: center;
-  max-width: 960px;
+  width: 960px;
   margin: auto;
+  padding: 40px;
 }
 
 blockquote:before,
@@ -518,23 +516,14 @@ blockquote::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
   position: relative;
+  padding: 40px;
+  border-right: 2px solid rgba(97, 64, 36, 0.2);
 }
 
 .social-media span {
   font-family: 'Alegreya';
   color: var(--color-3);
-}
-
-.social-media::after {
-  content: '';
-  display: block;
-  width: 2px;
-  height: 25vh;
-  background-color: rgba(97, 64, 36, 0.2);
-  position: absolute;
-  right: -40px;
 }
 
 .social-media p {
