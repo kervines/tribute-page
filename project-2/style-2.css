@@ -1,0 +1,22 @@
+/* Font Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,200&display=swap');
+/* Font Alegreya */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600;700&display=swap');
+/* Font Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
+
+:root {
+  --color-1: #f5f7cf;
+  --color-2: #ddcf94;
+  --color-3: #ba872b;
+  --color-4: #a13d24;
+  --color-5: #213131;
+  --color-6: #614024;
+  --color-7: #1b1208;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
