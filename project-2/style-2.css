@@ -48,6 +48,10 @@ a {
   gap: 5px;
 }
 
+#image {
+  max-width: 100%;
+}
+
 #img-div img {
   width: 800px;
 }
